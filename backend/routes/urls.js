@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const Urls = mongoose.model("Urls");
 
 router.post("/get", async (req, res) => {
-  const urls = await Urls.find({ _id: req.body.id });
+  const urls = await Urls.find({ ShortUrl: req.body.id });
   res.send(urls);
 });
 

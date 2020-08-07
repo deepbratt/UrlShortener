@@ -5,12 +5,10 @@ const urls_schema = new mongoose.Schema({
   OriginalUrl: {
     type: String,
     required: "url is required",
-    unique: true,
   },
   ShortUrl: {
     type: String,
     required: "shorturl cannot be empty",
-    unique: true,
   },
   createdAt: {
     type: String,
