@@ -8,6 +8,7 @@ const morgan = require("morgan");
 require("./config/db");
 
 //models
+require("./models/urls");
 
 //Middleware
 app.use(bodyParser.json()).use(morgan("combined"));
@@ -15,7 +16,7 @@ app.use("/public", express.static(__dirname + "/public"));
 app.use(cors());
 
 //routes
-
+app.use("/api/urls", require("./routes/urls"));
 
 app.use((req, res, next) => {
   req.status = 404;
