@@ -6,7 +6,7 @@ const RecentUrls = (props) => {
   console.log(props.data);
   return (
     <Container style={{ padding: 0 }}>
-      <Table striped bordered hover variant="dark">
+      <Table striped hover responsive="md" cellSpacing={5} variant="dark">
         <thead>
           <tr>
             <th>#</th>
