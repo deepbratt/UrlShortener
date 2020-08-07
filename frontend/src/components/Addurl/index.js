@@ -7,21 +7,20 @@ import {
   Form,
   Jumbotron,
   Row,
-  Spinner,
+  Spinner
 } from "react-bootstrap";
 import {
   API_URL,
   isUrlValid,
   shortUrlmake,
-  SITE_URL,
+  SITE_URL
 } from "./../../utils/gen.utils";
-const Addurl = () => {
+const Addurl = (props) => {
   const [link, setLink] = useState(null);
   const [errors, setErrors] = useState(true);
   const [loader, setLoader] = useState(false);
   const [data, setData] = useState(null);
   const handleChange = (e) => {
-    console.log(isUrlValid(e.target.value));
     if (isUrlValid(e.target.value)) {
       setLink(e.target.value);
       setErrors(false);
@@ -35,6 +34,8 @@ const Addurl = () => {
       .then((res) => {
         setData(res.data);
         setLoader(false);
+        setErrors(true);
+        props.setNewData(res.data._id);
       });
   };
   return (

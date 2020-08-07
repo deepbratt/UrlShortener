@@ -8,23 +8,23 @@ router.post("/get", async (req, res) => {
 });
 
 router.get("/getRecent", async (req, res) => {
-  const urls = await Urls.find();
+  const urls = await Urls.find().sort({ _id: -1 }).limit(5);
   res.send(urls);
 });
 
 router.post("/add", async (req, res) => {
-  const newUrl = new Urls();
-  newUrl.OriginalUrl = req.body.originalUrl;
-  newUrl.ShortUrl = req.body.shortUrl;
+  const urls = await Urls.find({ OriginalUrl: req.body.originalUrl });
 
-  await newUrl.save((err, res) => {
-    if (err) {
-      res.write(err);
-    } else {
-      console.log(res);
-    }
-  });
-  res.send(newUrl);
+  console.log(urls);
+  if (urls.length > 0) {
+    res.send(urls[0]);
+  } else {
+    const newUrl = new Urls();
+    newUrl.OriginalUrl = req.body.originalUrl;
+    newUrl.ShortUrl = req.body.shortUrl;
+    await newUrl.save();
+    res.send(newUrl);
+  }
 });
 
 module.exports = router;
