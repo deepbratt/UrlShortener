@@ -1,0 +1,131 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App component snapshot 1`] = `
+<div
+  className="App"
+>
+  <div
+    className="App"
+  >
+    <div
+      style={
+        Object {
+          "flex": 1,
+        }
+      }
+    >
+      <div
+        className="container"
+      >
+        <h1
+          style={
+            Object {
+              "alignItems": "center",
+              "color": "#007bff",
+              "padding": 20,
+              "textAlign": "center",
+            }
+          }
+        >
+          URL Shortener
+        </h1>
+      </div>
+      <div
+        className="container"
+        style={
+          Object {
+            "backgroundColor": "#e9ecef",
+          }
+        }
+      >
+        <div
+          className="jumbotron"
+        >
+          <h3>
+            Paste the URL to be shortened
+          </h3>
+          <div
+            className="row"
+          >
+            <div
+              className="col-md-8"
+            >
+              <div
+                className="form-group"
+              >
+                <input
+                  className="form-control form-control-lg"
+                  onChange={[Function]}
+                  placeholder="Enter the link here."
+                  type="link"
+                />
+              </div>
+            </div>
+            <div
+              className="col-md-4"
+            >
+              <button
+                className="btn btn-primary btn-block btn-lg"
+                disabled={true}
+                onClick={[Function]}
+                type="button"
+              >
+                Shorten Url
+              </button>
+            </div>
+          </div>
+          <p>
+            It is a free tool to shorten a URL or reduce a link.
+          </p>
+          <p>
+            URL Shortener to create a shortened link making it easy to remember.
+          </p>
+        </div>
+      </div>
+      <div
+        className="container"
+        style={
+          Object {
+            "padding": 0,
+          }
+        }
+      >
+        <div
+          className="table-responsive-md"
+        >
+          <table
+            cellSpacing={5}
+            className="table table-dark table-striped table-hover"
+          >
+            <thead>
+              <tr>
+                <th>
+                  #
+                </th>
+                <th>
+                  URL
+                </th>
+                <th>
+                  Short URL
+                </th>
+                <th>
+                  Created At
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td
+                  colSpan={4}
+                >
+                  No data found!
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
