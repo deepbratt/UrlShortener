@@ -1,28 +1,15 @@
-import React, { Fragment } from "react";
-import { Alert, Col, Container, Row } from "react-bootstrap";
+import React from "react";
+import Addurl from "./../components/Addurl";
+import Header from "./../components/Header";
+import RecentUrls from "./../components/RecentUrls";
+import "./home.css";
 function Home() {
   return (
-    <Fragment>
-      <div
-        style={{ alignContent: "center", flex: 1, justifyContent: "center" }}
-      >
-        <Alert key={1} variant="primary">
-          URL SHORTENER
-        </Alert>
-      </div>
-
-      <Container padder={10} style={{ marginBottom: 10 }}>
-        <Row>
-          <Col sm={12} md={6}>
-            adsada
-          </Col>
-
-          <Col md={6} sm={12}>
-            sdaasda
-          </Col>
-        </Row>
-      </Container>
-    </Fragment>
+    <div style={{ flex: 1 }}>
+      <Header />
+      <Addurl />
+      <RecentUrls />
+    </div>
   );
 }
 
